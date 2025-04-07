@@ -29,4 +29,13 @@ Milestone 1:
 Bonus:
 - RENDO LA PAGINA RESPONSIVE PER TUTTI I TIPI DI DISPOSITIVI
 
+Milestone 2:
+- Eseguo con Postman una chiamata a questo endpoint: https://lanciweb.github.io/demo/api/pictures/
+- La risposta è un array di oggetti con id, titolo, data e url
+- Essendo un array di oggetti, posso sostituire le card statiche create in precedenza con questo contenuto.
+
+Milestone 3:
+- Collego Axios via CDN nell'head di HTML
+- Effettuo una chiamata AJAX all'API con Axios dove richiamo le card.
+- Ricreo la struttura delle card all'interno di un forEach.
 
