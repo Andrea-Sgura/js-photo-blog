@@ -86,3 +86,37 @@ body{
         margin: 10px auto;
     }
 }
+
+/* OVERLAY DI SFONDO */
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.overlay-content{
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.overlay-image{
+    max-width: 90vw;
+    max-height: 80vh;
+}
+
+/* BOTTONE */
+.close-btn{
+    margin-top: 10px;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
