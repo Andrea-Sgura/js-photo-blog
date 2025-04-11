@@ -1,6 +1,11 @@
 // CONTENITORE DOVE INSERIRE LE CARD
 const gallery = document.querySelector(`.gallery`);
 
+const overlay = document.querySelector(".overlay");
+const overlayImage = document.querySelector(".overlay-image");
+const closeBtn = document.querySelector(".close-btn");
+
+
 // EFFETTUO LA CHIAMATA ALL'API UTILIZZANDO AXIOS
 axios.get(`https://lanciweb.github.io/demo/api/pictures/`).then(response => {
     const photos = response.data;
@@ -14,6 +19,13 @@ axios.get(`https://lanciweb.github.io/demo/api/pictures/`).then(response => {
         const img = document.createElement(`img`);
         img.src = photo.url;
         img.alt = photo.title;
+        img.classList.add("gallery-photo");
+
+        // MOSTRARE OVERLAY QUANDO CLICCO SU UNA FOTO
+        img.addEventListener("click", () => {
+            overlay.classList.remove("hidden");
+            overlayImage.src = photo.url;
+        });
 
         const info = document.createElement(`div`);
         info.classList.add(`info`);
@@ -32,5 +44,11 @@ axios.get(`https://lanciweb.github.io/demo/api/pictures/`).then(response => {
         card.appendChild(img);
         card.appendChild(info);
         gallery.appendChild(card);
-    })
-})
+    });
+});
+
+// CHIUDERE OVERLAY QUANDO CLICCO SU "CHIUDI"
+closeBtn.addEventListener("click", () => {
+    overlay.classList.add("hidden");
+});
+

@@ -61,3 +61,10 @@ REALIZZAZIONE ESERCIZIO
 Milestone 1:
 - Inserisco nell'HTML un nuovo div che conterrà l'overlay con un immagine randomica all'interno e un pulsante di chiusura.
 - Inserisco nel CSS le proprietà per far si che compaia nel giusto modo l'overlay con il button "Chiudi".
+
+Milestone 2:
+- Con la classe hidden imposto il display none in modo che mi nasconda l'overlay
+- Con JS inserisco evento di "click" dove appare e scompare l'overlay
+
+Milestone 3:
+- All'interno del ciclo forEach inserisco l'evento di "click" e collego l'immagine da visualizzare all'overlay tramite l'src
